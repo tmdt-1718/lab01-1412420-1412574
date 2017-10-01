@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :name, presence: true
   
   enum role: [:user, :admin]
+  mount_uploader :avatar, AvatarUploader
 
   def self.from_omniauth(auth)
     email = auth.info&.email 

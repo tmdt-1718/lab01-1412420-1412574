@@ -32,7 +32,24 @@ body {
 /*header*/
 
 #header {
-	
+	.user-info {
+		position: relative;
+		.profile-image {
+			position: absolute;
+			top: 5px;
+			left: 15px;
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+		}
+		.profile-link {
+			margin-left: 45px;
+			width: 80px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
 }
 
 #header #top-header {
