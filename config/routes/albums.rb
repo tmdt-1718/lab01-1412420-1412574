@@ -1,0 +1,1 @@
+resources :albums, only: [:index, :show]

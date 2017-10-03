@@ -1,0 +1,8 @@
+%h1.green-bg.title-content Album
+#album-list
+  -if @albums.present?
+    = render @albums
+    .kaminari-paginate
+      = paginate @albums
+  - else 
+    %h3.alert.alert-info Albums are empty

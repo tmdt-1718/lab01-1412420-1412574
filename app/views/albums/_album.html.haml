@@ -1,0 +1,12 @@
+.col-md-6.col
+  .album
+    = image_tag album.cover_image.url, alt: 'album-image'
+    .album-title
+      %p.author-alt
+        %a{:href => "#"} 
+          = album.user.name
+      %p.views
+        %i.fa.fa-eye{"aria-hidden" => "true"}>
+          = album.total_views
+
+  = link_to 'View Detail', album_path(id: album.id), class: 'btn btn-default btn-detail'

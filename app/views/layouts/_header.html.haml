@@ -25,13 +25,13 @@
 					#myNavbar.collapse.navbar-collapse
 						%ul.nav.navbar-nav
 							%li{:class => "#"}
-								= link_to I18n.t('menu.home'), root_path
+								= link_to I18n.t('menu.home'), root_path, class: active_menu('home')
 							%li{:class => "#"}
-								= link_to I18n.t('menu.albums'), root_path
+								= link_to I18n.t('menu.albums'), albums_path, class: active_menu('albums')
 							%li{:class => "#"}
-								= link_to I18n.t('menu.blogs'), root_path
+								= link_to I18n.t('menu.blogs'), root_path, class: active_menu('blogs')
 							%li{:class => "#"}
-								= link_to I18n.t('menu.about'), root_path
+								= link_to I18n.t('menu.about'), root_path, class: active_menu('about')
 						%ul#nav-user-info.nav.navbar-nav.navbar-right
 							- if user_signed_in?							
 								%li{class: 'user-info'}

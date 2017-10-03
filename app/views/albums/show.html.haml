@@ -1,0 +1,19 @@
+%h1.green-bg.title-content Album - Detail
+#image-list
+  - if @images.present?
+    - @images.each do |image|
+      .image
+        %a{:href => "#"}
+          = image_tag image.image_url, alt: 'image'
+        .title-group
+          .author
+            = image.user.name
+          .views
+            %p.view View
+            %p.n-view
+              %i.fa.fa-eye{"aria-hidden" => "true"}>
+               = image.views
+    .kaminari-paginate
+      = paginate @images
+  - else 
+    %h3.alert.alert-info Photos are empty

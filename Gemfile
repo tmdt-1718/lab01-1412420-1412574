@@ -48,6 +48,10 @@ gem 'devise'
 gem 'mini_magick'
 gem 'carrierwave', '~> 1.0'
 
+#paginng
+gem 'kaminari'
+
+
 group :development do
   gem 'pry-rails'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
