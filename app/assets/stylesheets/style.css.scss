@@ -32,7 +32,24 @@ body {
 /*header*/
 
 #header {
-	
+	.user-info {
+		position: relative;
+		.profile-image {
+			position: absolute;
+			top: 5px;
+			left: 15px;
+			width: 40px;
+			height: 40px;
+			border-radius: 100%;
+		}
+		.profile-link {
+			margin-left: 45px;
+			width: 80px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+	}
 }
 
 #header #top-header {
@@ -302,6 +319,13 @@ body {
 }
 
 /* end left-menu */
+#content-body {
+	margin-top: 5px;
+}
+
+#main-content {
+	margin-top: 1px;
+}
 
 #main-content .title-content {
 	margin: 0px;
@@ -324,7 +348,7 @@ body {
 	position: absolute;
 	bottom: 30px;
 	left: 7px;
-	color: #fff;
+	color: gray;
 	font-weight: bold;
 }
 
@@ -338,7 +362,7 @@ body {
 }
 
 #image-list .image .views p{
-	color: #fff;
+	color: gray;
 	padding: 0px;
 	margin: 0px;
 	font-size: 12px;
@@ -384,6 +408,7 @@ body {
 /* album */
 
 #album-list {
+	margin-top: 10px;
 	overflow: hidden;
 }
 
@@ -649,4 +674,14 @@ body {
 .myaleart {
   margin-bottom: 0px;
   padding: 10px;
+}
+
+.kaminari-paginate {
+	text-align: center;
+	padding-top: 20px;
+	clear: both;
+}
+
+.menu-active {
+	background: #5a9a54;
 }

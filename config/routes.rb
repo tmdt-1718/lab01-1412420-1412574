@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   scope '(:locale)', :locale => /en|vi/ do
     root to: 'home#index'
     draw :home
+    draw :albums
   end  
 end

@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Album.delete_all
+AlbumImage.delete_all
+20.times do |n| 
+  album = Album.new
+  album.cover_image = File.open(File.join(Rails.root, 'tt.jpg'))
+  album.user_id = 2 
+  album.save!
+
+  5.times do |m| 
+    image = AlbumImage.new 
+    image.image = File.open(File.join(Rails.root, 'tt.jpg'))
+    image.views = m
+    image.album = album
+    image.save!
+  end 
+end
