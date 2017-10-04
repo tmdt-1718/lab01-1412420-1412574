@@ -1,0 +1,7 @@
+%h1.green-bg.title-content Blog
+- if @blogs.present?
+  #blogs-list
+    = render @blogs
+- else 
+  %h3.alert.alert-info Blogs are empty
+

@@ -1,0 +1,20 @@
+.blog
+  .title-post
+    .avartar
+      %img{:height => "300", :src => "images/dog.jpg"}/
+    .post-info
+      .user-post
+        %a{:href => ""} {{ post.User.name }}
+      .time
+        %i.fa.fa-globe{"aria-hidden" => "true"}>
+         ·
+        %time {{ post.createdAt }}
+  .content-post
+    .main-content-post
+      %span.preview-content
+        {{ truncate post.content 200 }}
+      %a{:href => "./posts/{{ post.id }}"} See more
+    .detail-views
+      .n-vews
+        %i.fa.fa-eye{"aria-hidden" => "true"}
+        %span {{ post.view }}
