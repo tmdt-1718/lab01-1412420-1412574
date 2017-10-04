@@ -17,5 +17,6 @@ Rails.application.routes.draw do
     draw :home
     draw :albums
     draw :blogs
+    draw :about
   end  
 end
