@@ -31,12 +31,11 @@
 							%li{:class => "#"}
 								= link_to I18n.t('menu.blogs'), blogs_path, class: active_menu('blogs')
 							%li{:class => "#"}
-								= link_to I18n.t('menu.about'), root_path, class: active_menu('about')
+								= link_to I18n.t('menu.about'), about_index_path, class: active_menu('about')
 						%ul#nav-user-info.nav.navbar-nav.navbar-right
 							- if user_signed_in?							
 								%li{class: 'user-info'}
-									- if current_user.avatar.present?
-										= image_tag current_user.avatar.thumb.url, class: 'profile-image'
+									= current_user.decorate.user_thumb_avatar class: 'profile-image' 
 									%a{:href => "", class: 'profile-link'}
 										= current_user.name
 								%li

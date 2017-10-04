@@ -1,0 +1,20 @@
+%h1.green-bg.title-content About
+
+#image-list
+  #about-us
+    - if @group&.users.present?
+      - @group.users.each do  |user|
+        .row.about-user
+          .col-md-4
+            .personal-img
+              = user.decorate.user_avatar
+          .col-md-7
+            %h2 
+              = user.name
+            %p
+              %span MSSV: #{user.name}
+
+#map
+  %h1.green-bg.title-content Contact us
+  #map-contain
+    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2680771993787!2d106.70903174982548!3d10.790768261843107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528ad6300cfa1%3A0xf62e3515a8f8fae9!2zMTIgUGjhuqFtIFZp4bq_dCBDaMOhbmgsIHBoxrDhu51uZyAxOSwgQsOsbmggVGjhuqFuaCwgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1507135351712", :style => "border:0", :width => "600"}

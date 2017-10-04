@@ -6,7 +6,7 @@ class User < ApplicationRecord
          :omniauthable, :omniauth_providers => [:facebook, :google_oauth2]
 
   #validates
-  validates :name, presence: true
+  validates :name, :student_id, presence: true
   
   #enums
   enum role: [:user, :admin]
@@ -17,6 +17,10 @@ class User < ApplicationRecord
   #relationships
   has_many :albums
   has_many :blogs
+  belongs_to :group, optional: true
+
+  #cb
+  before_save :_set_default_group
 
   def self.from_omniauth(auth)
     email = auth.info&.email 
@@ -38,4 +42,10 @@ class User < ApplicationRecord
     end
     user
   end
+
+  private 
+  def _set_default_group
+    group = Group.first
+    self.group = group
+  end 
 end
