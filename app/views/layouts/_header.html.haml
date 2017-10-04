@@ -36,8 +36,8 @@
 							- if user_signed_in?							
 								%li{class: 'user-info'}
 									= current_user.decorate.user_thumb_avatar class: 'profile-image' 
-									%a{:href => "", class: 'profile-link'}
-										= current_user.name
+									= link_to current_user.name, about_index_path(anchor: "#{current_user.name}_#{current_user.id}"), class: 'profile-link'
+
 								%li
 									= link_to destroy_user_session_path, method: :delete do
 										%i.fa.fa-sign-out{"aria-hidden" => "true"}

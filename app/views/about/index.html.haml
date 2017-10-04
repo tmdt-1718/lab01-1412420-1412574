@@ -4,7 +4,7 @@
   #about-us
     - if @group&.users.present?
       - @group.users.each do  |user|
-        .row.about-user
+        .row.about-user{id: "#{user.name}_#{user.id}"}
           .col-md-4
             .personal-img
               = user.decorate.user_avatar
@@ -12,7 +12,7 @@
             %h2 
               = user.name
             %p
-              %span MSSV: #{user.name}
+              %span MSSV: #{user.student_id}
 
 #map
   %h1.green-bg.title-content Contact us

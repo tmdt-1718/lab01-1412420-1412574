@@ -4,8 +4,7 @@
       = blog.user.decorate.user_thumb_avatar
     .post-info
       .user-post
-        %a{:href => ""} 
-          = blog.user.name
+        = link_to blog.user.name, about_index_path(anchor: "#{blog.user.name}_#{blog.user.id}")
       .time
         %i.fa.fa-globe{"aria-hidden" => "true"}>
          ·
