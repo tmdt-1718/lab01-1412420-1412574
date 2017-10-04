@@ -9,4 +9,4 @@
         %i.fa.fa-eye{"aria-hidden" => "true"}>
           = album.total_views
 
-  = link_to 'View Detail', album_path(id: album.id), class: 'btn btn-default btn-detail'
+  = link_to 'View Detail', album_album_images_path(album_id: album.id), class: 'btn btn-default btn-detail'
