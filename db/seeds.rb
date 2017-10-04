@@ -23,3 +23,8 @@ AlbumImage.delete_all
     image.save!
   end 
 end
+
+Blog.delete_all
+30.times do |n| 
+  Blog.create({user_id: 2, views: n, content: Faker::Lorem.paragraph(10, true, 3)})
+end 

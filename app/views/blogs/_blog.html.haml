@@ -1,0 +1,23 @@
+.blog
+  .title-post
+    .avartar
+      = image_tag blog.user.avatar_url, alt: 'user profile photo'
+    .post-info
+      .user-post
+        %a{:href => ""} 
+          = blog.user.name
+      .time
+        %i.fa.fa-globe{"aria-hidden" => "true"}>
+         ·
+        %time 
+          = blog.user.created_at
+  .content-post
+    .main-content-post
+      %span.preview-content
+        = truncate(blog.content, length: 250, omission: '...')
+      = link_to 'See more', blog_path(id: blog.id)
+    .detail-views
+      .n-vews
+        %i.fa.fa-eye{"aria-hidden" => "true"}
+        %span 
+          = blog.views

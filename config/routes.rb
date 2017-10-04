@@ -16,5 +16,6 @@ Rails.application.routes.draw do
     root to: 'home#index'
     draw :home
     draw :albums
+    draw :blogs
   end  
 end
