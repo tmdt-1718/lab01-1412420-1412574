@@ -16,7 +16,7 @@ class User < ApplicationRecord
 
   #relationships
   has_many :albums
-
+  has_many :blogs
 
   def self.from_omniauth(auth)
     email = auth.info&.email 

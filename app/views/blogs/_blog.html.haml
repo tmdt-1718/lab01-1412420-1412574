@@ -1,20 +1,23 @@
 .blog
   .title-post
     .avartar
-      %img{:height => "300", :src => "images/dog.jpg"}/
+      = image_tag blog.user.avatar_url, alt: 'user profile photo'
     .post-info
       .user-post
-        %a{:href => ""} {{ post.User.name }}
+        %a{:href => ""} 
+          = blog.user.name
       .time
         %i.fa.fa-globe{"aria-hidden" => "true"}>
          ·
-        %time {{ post.createdAt }}
+        %time 
+          = blog.user.created_at
   .content-post
     .main-content-post
       %span.preview-content
-        {{ truncate post.content 200 }}
-      %a{:href => "./posts/{{ post.id }}"} See more
+        = truncate(blog.content, length: 250, omission: '...')
+      = link_to 'See more', blog_path(id: blog.id)
     .detail-views
       .n-vews
         %i.fa.fa-eye{"aria-hidden" => "true"}
-        %span {{ post.view }}
+        %span 
+          = blog.views
