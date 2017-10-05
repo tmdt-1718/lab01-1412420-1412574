@@ -3,7 +3,7 @@
   .blog
     .title-post
       .avartar
-        = image_tag @blog.user.avatar_url, alt: 'user profile photo'
+        = @blog.user.decorate.user_thumb_avatar
       .post-info
         .user-post
           %a{:href => ""} 
@@ -16,7 +16,7 @@
     .content-post
       .main-content-post
         %span.preview-content
-          = @blog.content
+          = raw @blog.content
       .detail-views
         .n-vews
           %i.fa.fa-eye{"aria-hidden" => "true"}

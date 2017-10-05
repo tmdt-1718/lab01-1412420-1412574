@@ -269,6 +269,9 @@ body {
 	transition: 0.3s;
 	text-decoration: none;
 	color: #fff;
+	&.specific-link {
+		color: #000;
+	}
 }
 
 
@@ -585,7 +588,7 @@ body {
 }
 
 #blogs-list .blog .content-post .main-content-post{
-	text-align: justify;
+	overflow: hidden;
 }
 
 #blogs-list .blog .content-post .detail-views{
@@ -692,4 +695,17 @@ body {
 
 .menu-active {
 	background: #5a9a54;
+}
+
+.new-blog-form {
+	margin-top: 30px;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+		margin: 0 0 18px 0;
+		padding-left: 0px;
+  }
 }
