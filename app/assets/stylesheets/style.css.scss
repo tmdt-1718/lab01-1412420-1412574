@@ -49,6 +49,9 @@ body {
 			text-overflow: ellipsis;
 			white-space: nowrap;
 		}
+		.profile-link:hover {
+			background: none;
+		}
 	}
 }
 
@@ -125,7 +128,8 @@ body {
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #fbfbfb;
+	color: #fbfbfb;
+	background: #5a9a54;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
   background-color: #5cb85c;

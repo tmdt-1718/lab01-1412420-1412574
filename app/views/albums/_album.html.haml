@@ -1,6 +1,7 @@
 .col-md-6.col
   .album
-    = image_tag album.cover_image.url, alt: 'album-image'
+    - if album.cover_image.present?
+      = image_tag album.cover_image.url, alt: 'album-image'
     .album-title
       %p.author-alt
         %a{:href => "#"} 
@@ -9,4 +10,4 @@
         %i.fa.fa-eye{"aria-hidden" => "true"}>
           = album.total_views
 
-  = link_to 'View Detail', album_album_images_path(album_id: album.id), class: 'btn btn-default btn-detail'
+  = link_to 'View Detail', album_album_images_path(album_id: album.id), class: 'btn btn-default btn-detail', data: { turbolinks: false }

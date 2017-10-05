@@ -4,7 +4,8 @@
     - @images.each do |image|
       .image
         %a{:href => "#"}
-          = image_tag image.image_url, alt: 'image'
+          -if image.image.present?
+            = image_tag image.image_url, alt: 'image'
         .title-group
           .author
             = image.user.name
