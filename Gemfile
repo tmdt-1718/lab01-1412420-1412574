@@ -25,7 +25,7 @@ gem 'kaminari'
 gem 'ransack'
 gem 'jquery-rails'
 gem "font-awesome-rails"
-
+gem 'counter_culture', '~> 1.8'
 
 #omniauth
 gem 'omniauth-facebook'
