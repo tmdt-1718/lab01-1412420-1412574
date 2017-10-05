@@ -13,7 +13,7 @@
   .content-post
     .main-content-post
       %span.preview-content
-        = truncate(blog.content, length: 250, omission: '...')
+        = truncate(sanitize(blog.content, tags: []), length: 250, omission: '...')
       = link_to 'See more', blog_path(id: blog.id)
     .detail-views
       .n-vews

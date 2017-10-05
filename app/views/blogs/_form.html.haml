@@ -1,0 +1,12 @@
+= form_for blog, html: { class: 'new-blog-form' } do |f|
+  #error_explanation
+    - if blog.errors.any?
+      %ul
+        - blog.errors.full_messages.each do |msg|
+          %li= msg
+          
+  .form-group
+    = f.label :content
+    = f.text_area :content, data: { provider: "summernote" } 
+  .form-group
+    %button{type: :submit, class: 'btn btn-primary'} Create post

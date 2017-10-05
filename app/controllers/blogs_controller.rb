@@ -8,8 +8,25 @@ class BlogsController < ApplicationController
   def show 
   end 
 
+  def new 
+    @blog = Blog.new 
+  end 
+
+  def create
+    @blog = Blog.new(_blog_params.merge(user: current_user))
+    if @blog.save 
+      redirect_to blog_path(id: @blog.id)
+    else 
+      render :new
+    end
+  end 
+
   private 
   def _set_blog
     @blog = Blog.find(params[:id])
+  end 
+
+  def _blog_params 
+    params.require(:blog).permit(:content)
   end 
 end

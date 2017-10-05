@@ -1,1 +1,1 @@
-resources :blogs, only: [:index, :show]
+resources :blogs, except: [:update, :delete]

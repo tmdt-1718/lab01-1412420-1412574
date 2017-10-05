@@ -26,6 +26,7 @@ gem 'ransack'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'counter_culture', '~> 1.8'
+gem 'summernote-rails'
 
 #omniauth
 gem 'omniauth-facebook'
