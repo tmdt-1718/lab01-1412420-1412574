@@ -8,6 +8,7 @@ end
 gem 'rails', '~> 5.1.4'
 gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.7'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -22,6 +23,14 @@ gem 'friendly_id'
 gem 'haml-rails'
 gem 'kaminari'
 gem 'ransack'
+gem 'jquery-rails'
+gem "font-awesome-rails"
+gem 'counter_culture', '~> 1.8'
+
+#omniauth
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-twitter'
 
 # linter
 gem 'rubocop', require: false
@@ -33,9 +42,18 @@ gem 'debride'
 #decorators
 gem 'draper'
 gem 'active_model_serializers', '~> 0.10.2'
+gem 'devise'
+
+#uploader
+gem 'mini_magick'
+gem 'carrierwave', '~> 1.0'
+
+#paginng
+gem 'kaminari'
 
 
 group :development do
+  gem 'pry-rails'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

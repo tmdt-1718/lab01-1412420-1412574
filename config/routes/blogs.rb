@@ -1,0 +1,1 @@
+resources :blogs, only: [:index, :show]

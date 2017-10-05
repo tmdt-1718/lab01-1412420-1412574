@@ -1,0 +1,22 @@
+.blog
+  .title-post
+    .avartar
+      = blog.user.decorate.user_thumb_avatar
+    .post-info
+      .user-post
+        = link_to blog.user.name, about_index_path(anchor: "#{blog.user.name}_#{blog.user.id}")
+      .time
+        %i.fa.fa-globe{"aria-hidden" => "true"}>
+         ·
+        %time 
+          = blog.user.created_at
+  .content-post
+    .main-content-post
+      %span.preview-content
+        = truncate(blog.content, length: 250, omission: '...')
+      = link_to 'See more', blog_path(id: blog.id)
+    .detail-views
+      .n-vews
+        %i.fa.fa-eye{"aria-hidden" => "true"}
+        %span 
+          = blog.views
