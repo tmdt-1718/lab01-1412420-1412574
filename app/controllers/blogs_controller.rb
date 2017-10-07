@@ -1,6 +1,8 @@
 class BlogsController < ApplicationController
   before_action :_set_blog, only: [:show]
-
+  add_breadcrumb "Blogs", :blogs_path  
+  add_breadcrumb "New", :new_blog_path  
+  
   def index
     @blogs = Blog.order(updated_at: :desc).page(params[:page]).per(ITEMS_PER_PAGE)
   end

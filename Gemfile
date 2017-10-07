@@ -27,6 +27,7 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'counter_culture', '~> 1.8'
 gem 'summernote-rails'
+gem "breadcrumbs_on_rails"
 
 #omniauth
 gem 'omniauth-facebook'
@@ -51,7 +52,6 @@ gem 'carrierwave', '~> 1.0'
 
 #paginng
 gem 'kaminari'
-
 
 group :development do
   gem 'pry-rails'
