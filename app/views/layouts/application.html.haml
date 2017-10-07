@@ -10,6 +10,8 @@
   %body
     = render "layouts/header"
     #main
+      #breadcumbs.container
+        = render_breadcrumbs :separator => ' / '
       #content-body.container
         = render "layouts/sidebar"
         #main-content.col-md-9
