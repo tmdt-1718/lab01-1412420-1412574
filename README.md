@@ -44,16 +44,14 @@ Yêu cầu **không bắt buộc**:
 * [ ] Gửi mail cho tác giả khi có người dùng comment vào bài viết của họ. (**MSSV**)
 
 Liệt kê các **yêu cầu nâng cao** đã thực hiện:
-* [x] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook.
-* [x] Cho phép người dùng layout bài viết bằng text editor.
+* [x] Cho phép người dùng đăng nhập bằng tài khoản facebook và lấy ảnh đại diện, email từ facebook. (**1412420**)
+* [x] Cho phép người dùng layout bài viết bằng text editor. (**1412420**)
 
 ## Demo
 
 Link ảnh GIF demo ứng dụng:
 
 ![Video Walkthrough](demo.gif)
-
-Tạo ảnh GIF với chương trình [LiceCap](http://www.cockos.com/licecap/).
 
 ## For developer 
 
