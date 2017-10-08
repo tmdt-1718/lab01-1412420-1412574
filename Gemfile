@@ -48,11 +48,9 @@ gem 'active_model_serializers', '~> 0.10.2'
 gem 'devise'
 
 #uploader
+gem 'carrierwave'
 gem 'mini_magick'
-gem 'carrierwave', '~> 1.0'
-
-#paginng
-gem 'kaminari'
+gem 'cloudinary'
 
 group :development do
   gem 'pry-rails'

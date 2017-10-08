@@ -3,7 +3,7 @@ development:
   encoding: unicode
   pool:     25
   database: lab01-development
-    username: <%= ENV['POSTGRES_USER'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
   host:     <%= ENV['POSTGRES_URL'] %>
   template: template0

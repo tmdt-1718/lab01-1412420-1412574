@@ -14,13 +14,13 @@ Blog.delete_all
 
 user = User.first
 
-20.times do |n| 
+12.times do |n| 
   album = Album.new
   album.cover_image = File.open(File.join(Rails.root, images.sample))
   album.user = user
   album.save!
 
-  5.times do |m| 
+  2.times do |m| 
     image = AlbumImage.new 
     image.image = File.open(File.join(Rails.root, images.sample))
     image.views = m
