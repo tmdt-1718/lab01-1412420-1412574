@@ -1,0 +1,1 @@
+resources :blogs, except: [:update, :delete]

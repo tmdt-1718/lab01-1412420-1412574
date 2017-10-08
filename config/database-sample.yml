@@ -3,9 +3,9 @@ development:
   encoding: unicode
   pool:     25
   database: lab01-development
-  username: ENV['POSTGRES_USER']
-  password: ENV['POSTGRES_PASSWORD']
-  host:     ENV['POSTGRES_URL']
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host:     <%= ENV['POSTGRES_URL'] %>
   template: template0
 
 test:
@@ -13,9 +13,9 @@ test:
   encoding: unicode
   pool:     25
   database: lab01-test
-  username: ENV['POSTGRES_USER']
-  password: ENV['POSTGRES_PASSWORD']
-  host:     ENV['POSTGRES_URL']
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
+  host:     <%= ENV['POSTGRES_URL'] %>
   template: template0
 
 staging:

@@ -1,0 +1,24 @@
+%h1.green-bg.title-content Blog - Details
+#blogs-list
+  .blog
+    .title-post
+      .avartar
+        = @blog.user.decorate.user_thumb_avatar
+      .post-info
+        .user-post
+          %a{:href => ""} 
+            = @blog.user.name
+        .time
+          %i.fa.fa-globe{"aria-hidden" => "true"}>
+           ·
+          %time 
+            = @blog.user.created_at
+    .content-post
+      .main-content-post
+        %span.preview-content
+          = raw @blog.content
+      .detail-views
+        .n-vews
+          %i.fa.fa-eye{"aria-hidden" => "true"}
+          %span 
+            = @blog.views
