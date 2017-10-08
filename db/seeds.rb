@@ -6,25 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+images = ['t1.jpg', 't2.jpg', 't3.jpg']
 
 Album.delete_all
 AlbumImage.delete_all
+Blog.delete_all
+
+user = User.first
+
 20.times do |n| 
   album = Album.new
-  album.cover_image = File.open(File.join(Rails.root, 'tt.jpg'))
-  album.user_id = 2 
+  album.cover_image = File.open(File.join(Rails.root, images.sample))
+  album.user = user
   album.save!
 
   5.times do |m| 
     image = AlbumImage.new 
-    image.image = File.open(File.join(Rails.root, 'tt.jpg'))
+    image.image = File.open(File.join(Rails.root, images.sample))
     image.views = m
     image.album = album
     image.save!
   end 
 end
 
-Blog.delete_all
 30.times do |n| 
-  Blog.create({user_id: 2, views: n, content: Faker::Lorem.paragraph(10, true, 3)})
+  Blog.create({user: user, views: n, content: Faker::Lorem.paragraph(10, true, 3)})
 end 
