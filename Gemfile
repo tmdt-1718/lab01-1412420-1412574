@@ -28,6 +28,7 @@ gem "font-awesome-rails"
 gem 'counter_culture', '~> 1.8'
 gem 'summernote-rails'
 gem "breadcrumbs_on_rails"
+gem 'faker'
 
 #omniauth
 gem 'omniauth-facebook'
@@ -73,7 +74,6 @@ group :development, :test, :staging do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'shoulda-matchers', '~> 3.0'
-  gem 'faker'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
